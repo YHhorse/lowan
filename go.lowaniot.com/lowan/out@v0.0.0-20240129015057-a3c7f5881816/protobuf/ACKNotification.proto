@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package out;
+
+message ACKNotification {
+ string dev_eui = 1;
+ string join_eui = 2;
+ string reference = 3;
+ uint32 fcnt = 4;
+}

@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package out;
+
+import "google/protobuf/timestamp.proto";
+import "gw/gw.proto";
+import "UpDownTXInfo.proto";
+import "MACCommand.proto";
+
+message LogInfo {
+ string uuid = 1;
+ string direction = 2;
+ string reference = 3;
+ google.protobuf.Timestamp time = 4;
+ int32 fport = 5;
+ bytes data = 6;
+ bytes app_data = 7;
+ int32 lose_cnt = 8;
+ bool confirmed = 9;
+ bool ack = 10;
+ int32 fcnt = 11;
+ int32 tmst = 12;
+ int32 slot = 13;
+ int32 gw_delay = 14;
+ string mac_version = 15;
+ bytes dev_addr = 16;
+ bytes dev_eui = 17;
+ bytes join_eui = 18;
+ bool adr = 19;
+ int32 tx_power_index = 20;
+ int32 nb_trans = 21;
+ int32 fcnt_up = 22;
+ int32 n_fcnt_down = 23;
+ int32 a_fcnt_down = 24;
+ int32 conf_fcnt = 25;
+ int32 gateway_count = 26;
+ bytes gateway_id = 27;
+ repeated gw.UplinkRXInfo rx_info_set = 28;
+ UpDownTXInfo tx_info = 29;
+ repeated MACCommand mac_commands = 30;
+ string error = 31;
+ int32 error_type = 32;
+ bytes error_frame = 33;
+ bool is_final_process = 34;
+ string rf_region = 35;
+ string device_mode = 36;
+ int32 dr = 37;
+}

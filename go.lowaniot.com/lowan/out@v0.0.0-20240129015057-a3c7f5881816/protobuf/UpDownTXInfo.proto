@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package out;
+
+import "google/protobuf/duration.proto";
+import "common/common.proto";
+import "gw/gw.proto";
+
+message UpDownTXInfo {
+ bytes gateway_id = 1;
+ bool immediately = 2;
+ google.protobuf.Duration delay = 3;
+ int32 frequency = 4;
+ int32 power = 5;
+ common.Modulation modulation = 6;
+ gw.LoRaModulationInfo lora_modulation_info = 7;
+ gw.FSKModulationInfo fsk_modulation_info = 8;
+}

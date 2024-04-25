@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package out;
+
+message JoinNotification {
+ string dev_eui = 1;
+ string join_eui = 2;
+ string dev_addr = 3;
+ string mac = 4;
+ int32 rssi = 5;
+}

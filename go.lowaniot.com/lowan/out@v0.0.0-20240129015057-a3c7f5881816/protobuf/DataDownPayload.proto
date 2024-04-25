@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package out;
+
+message DataDownPayload {
+ bytes dev_eui = 1;
+ bytes data = 2;
+ bool confirmed = 3;
+ int32 fport = 4;
+ string reference = 5;
+
+ int64 force_frequency_offset = 6;
+ string force_gateway_id = 7;
+ int32 force_slot = 8;
+ int32 force_spread_factor = 9;
+ int32 force_band_width = 10;
+
+ int32 expires = 11;
+ int32 priority = 12;
+
+ bool multicast = 13;
+ int32 group_id = 14;
+ int32 fcnt = 15;
+ string rf_retion = 16;
+}

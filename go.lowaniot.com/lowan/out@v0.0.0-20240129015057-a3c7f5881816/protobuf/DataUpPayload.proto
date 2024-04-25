@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package out;
+
+import "google/protobuf/timestamp.proto";
+
+message DataUpPayload {
+ string dev_eui = 1;
+ string join_eui = 2;
+ int32 fcnt = 3;
+ int32 fport = 4;
+ bytes data = 5;
+
+ string rx_info_gateway_id = 6;
+ google.protobuf.Timestamp rx_info_time = 7;
+ int32 rx_info_rssi = 8;
+ float rx_info_lora_snr = 9;
+ float rx_info_location_latitude = 10;
+ float rx_info_location_longitude = 11;
+
+ int32 frequency = 12;
+ int32 gateway_count = 13;
+ int32 lose_cnt = 14;
+}

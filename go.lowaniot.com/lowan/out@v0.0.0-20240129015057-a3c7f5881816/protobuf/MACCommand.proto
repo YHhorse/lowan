@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package out;
+
+message MACCommand {
+ int32 cid = 1;
+ bytes payload = 2;
+}
